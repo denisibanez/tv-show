@@ -1,15 +1,10 @@
 <template>
-  <BannerWrapper
-    :background="background"
-    :is-detail="true"
-  >
+  <BannerWrapper :background="background" :is-detail="true">
     <template #body>
       <div class="detailView">
         <div class="row justify-center">
           <div class="col detailView__title text-center q-pa-md">
-            <p class="q-ma-none">
-              EP. 1 Power Puff Girls
-            </p>
+            <p class="q-ma-none">EP. 1 Power Puff Girls</p>
           </div>
         </div>
 

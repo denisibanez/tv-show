@@ -1,14 +1,9 @@
 <template>
   <div :class="['descriptionBanner__wrapper']">
-    <p class="subtitle flex">
-      <span>V</span> Series
-    </p>
+    <p class="subtitle flex"><span>V</span> Series</p>
 
     <div class="descriptionBanner__brand">
-      <img
-        src="@/assets/images/powerpuffgirls_brand.svg"
-        alt="brand"
-      >
+      <img src="@/assets/images/powerpuffgirls_brand.svg" alt="brand" />
     </div>
 
     <div class="descriptionBanner__ranking flex items-center">
@@ -18,9 +13,7 @@
         </p>
       </div>
       <div class="text">
-        <p class="q-ma-none">
-          #1 in <span>Brazil</span> Today
-        </p>
+        <p class="q-ma-none">#1 in <span>Brazil</span> Today</p>
       </div>
     </div>
 
@@ -45,11 +38,7 @@
           />
         </div>
         <div class="col-md-3 col-lg-4">
-          <ButtonComponent
-            label="More Info"
-            class="secondary"
-            icon="info"
-          />
+          <ButtonComponent label="More Info" class="secondary" icon="info" />
         </div>
       </div>
     </div>
@@ -62,7 +51,6 @@ import { Ref, ref } from 'vue';
 
 // COMPONENTS
 import { ButtonComponent } from '@/components';
-
 
 // TYPES
 import type { DescriptionBannerProps } from './DescriptionBanner.d';
