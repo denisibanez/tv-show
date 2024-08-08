@@ -19,7 +19,7 @@
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
         </swiper>
       </div>

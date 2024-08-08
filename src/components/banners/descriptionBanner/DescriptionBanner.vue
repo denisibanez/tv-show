@@ -13,7 +13,9 @@
 
     <div class="descriptionBanner__ranking flex items-center">
       <div class="badge q-mr-md q-pa-xs">
-        <p class="flex q-ma-none column items-center justify-center">
+        <p
+          class="flex q-ma-none column items-center justify-center"
+        >
           Top <strong>10</strong>
         </p>
       </div>
