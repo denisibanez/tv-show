@@ -5,8 +5,16 @@ const router = createRouter({
   routes: [
     {
       path: '',
-      component: () => import('@/views/home/HomeComponent.vue'),
+      component: () => import('@/components/layout/LayoutComponent.vue'),
       meta: { requiresAuth: true },
+
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/home/HomeComponent.vue'),
+          meta: { requiresAuth: true },
+        },
+      ],
     },
   ],
 });
