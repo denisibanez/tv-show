@@ -1,19 +1,10 @@
 <template>
-  <button
-    :class="[buttonType]"
-    type="button"
-  >
-    <span
-      v-if="icon && !loader"
-      class="material-symbols-outlined q-mr-sm"
-    >
+  <button :class="[buttonType]" type="button">
+    <span v-if="icon && !loader" class="material-symbols-outlined q-mr-sm">
       {{ icon }}
     </span>
     <span v-if="label && !loader">{{ label }}</span>
-    <LoaderComponent
-      v-if="loader"
-      size="small"
-    />
+    <LoaderComponent v-if="loader" size="small" />
   </button>
 </template>
 

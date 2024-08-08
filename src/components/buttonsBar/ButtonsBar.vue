@@ -2,19 +2,11 @@
   <div class="buttonsBar__wrapper">
     <div class="buttonsBar__ranking q-mb-sm">
       <div class="row">
-        <div
-          class="col-12"
-        >
-          <div
-            class="
-          badge
-          q-mr-md
-          q-pa-xs"
-          >
+        <div class="col-12">
+          <div class="badge q-mr-md q-pa-xs">
             <p class="flex q-ma-none items-center justify-center full-width">
-              <span class="badge__box q-mr-xs">
-                Top <strong>10</strong>
-              </span>  <span class="text">#1 in Brazil</span> Today
+              <span class="badge__box q-mr-xs"> Top <strong>10</strong> </span>
+              <span class="text">#1 in Brazil</span> Today
             </p>
           </div>
         </div>
@@ -24,22 +16,13 @@
     <div class="buttonsBar__actions">
       <div class="row">
         <div class="col-3">
-          <ButtonIcon
-            label="My List"
-            icon="add"
-          />
+          <ButtonIcon label="My List" icon="add" />
         </div>
         <div class="col-6">
-          <ButtonComponent
-            label="Play"
-            icon="play_arrow"
-          />
+          <ButtonComponent label="Play" icon="play_arrow" />
         </div>
         <div class="col-3">
-          <ButtonIcon
-            label="Info"
-            icon="info"
-          />
+          <ButtonIcon label="Info" icon="info" />
         </div>
       </div>
     </div>
@@ -48,7 +31,6 @@
 
 <script lang="ts" setup>
 import { ButtonIcon, ButtonComponent } from '@/components';
-
 </script>
 
 <style lang="scss" scoped>
@@ -63,17 +45,17 @@ import { ButtonIcon, ButtonComponent } from '@/components';
 
   &__ranking {
     p {
-          @include font-format(
-          $size: 1rem,
-          $family: 'Netflix Sans Bold',
-          $line-height: 0.5rem,
-        );
+      @include font-format(
+        $size: 1rem,
+        $family: 'Netflix Sans Bold',
+        $line-height: 0.5rem
+      );
 
-        .text {
-          display: block;
-          text-align: center;
-          min-width: 100px;
-        }
+      .text {
+        display: block;
+        text-align: center;
+        min-width: 100px;
+      }
     }
     .badge {
       &__box {
@@ -85,7 +67,7 @@ import { ButtonIcon, ButtonComponent } from '@/components';
           $size: 0.4rem,
           $family: 'Netflix Sans Bold',
           $transform: uppercase,
-          $line-height: 0.5rem,
+          $line-height: 0.5rem
         );
       }
     }

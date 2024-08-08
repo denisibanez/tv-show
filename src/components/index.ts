@@ -7,6 +7,7 @@ import { SliderComponent } from './slider';
 import { ButtonsBar } from './buttonsBar';
 import { MobileNav } from './mobileNav';
 import { ButtonIcon } from './buttonIcon';
+import { BannerWrapper } from './bannerWrapper';
 
 export {
   ButtonComponent,
@@ -18,4 +19,5 @@ export {
   ButtonsBar,
   MobileNav,
   ButtonIcon,
+  BannerWrapper,
 };

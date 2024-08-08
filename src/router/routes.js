@@ -11,10 +11,22 @@ const router = createRouter({
       children: [
         {
           path: '',
-          component: () => import('@/views/home/HomeComponent.vue'),
+          component: () => import('@/views/home/HomeView.vue'),
+          meta: { requiresAuth: true },
+        },
+
+        {
+          path: 'detail/:id',
+          component: () => import('@/views/detail/DetailView.vue'),
           meta: { requiresAuth: true },
         },
       ],
+    },
+
+    {
+      path: '/:catchAll(.*)*',
+      component: () => import('@/views/notFound/NotFound.vue'),
+      meta: { requiresAuth: true },
     },
   ],
 });

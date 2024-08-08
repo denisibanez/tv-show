@@ -13,7 +13,10 @@
             <li
               v-for="(navItem, index) in navListFormated"
               :key="index"
-              :class="['Header__nav--item flex', { 'q-mr-md': index !== navList.length - 1 }]"
+              :class="[
+                'Header__nav--item flex',
+                { 'q-mr-md': index !== navList.length - 1 },
+              ]"
             >
               <router-link
                 class="Header__nav--link"
@@ -26,7 +29,7 @@
         </nav>
       </div>
 
-      <div class="Header__right--side flex q-px-xl q-pb-sm mobile-hide ">
+      <div class="Header__right--side flex q-px-xl q-pb-sm mobile-hide">
         <div class="Header__search q-px-md cursor-pointer">
           <span class="material-symbols-outlined"> search </span>
         </div>
@@ -55,7 +58,7 @@ const navList: Ref<ListNav[]> = ref([
   { title: 'My List', link: '/' },
 ]);
 
-const navListFormated: Ref<ListNav[]> = ref([])
+const navListFormated: Ref<ListNav[]> = ref([]);
 
 onMounted(() => {
   onResize();
@@ -67,13 +70,11 @@ onUnmounted(() => {
 });
 
 function onResize() {
-  if(window.innerWidth <= 991) {
+  if (window.innerWidth <= 991) {
     navListFormated.value = navList.value.slice(0, 2);
-    
   } else {
     navListFormated.value = navList.value;
   }
-
 }
 </script>
 
@@ -92,6 +93,7 @@ function onResize() {
   }
 
   &__logo {
+    cursor: pointer;
     @include font-format(
       $color: $red-light,
       $size: 1.8rem,
@@ -104,7 +106,7 @@ function onResize() {
     li {
       @include font-format(
         $color: $color-text,
-        $size: 1.1rem,
+        $size: 0.9rem,
         $family: 'Netflix Sans Regular'
       );
     }

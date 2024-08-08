@@ -1,7 +1,7 @@
 <template>
-  <div class="descriptionBanner__wrapper">
+  <div :class="['descriptionBanner__wrapper']">
     <p class="subtitle flex">
-      <span>DEV</span> Series
+      <span>V</span> Series
     </p>
 
     <div class="descriptionBanner__brand">
@@ -60,6 +60,12 @@
 import { Ref, ref } from 'vue';
 
 import { ButtonComponent } from '@/components';
+
+import type { DescriptionBannerProps } from './DescriptionBanner.d';
+
+/* eslint-disable-next-line */
+const props = withDefaults(defineProps<DescriptionBannerProps>(), {
+});
 
 const loader: Ref<boolean> = ref(false);
 </script>

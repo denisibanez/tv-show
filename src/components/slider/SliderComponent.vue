@@ -3,95 +3,21 @@
     <div class="row">
       <div class="col">
         <swiper
-          :slides-per-view="3"
-          :slides-per-group="3"
+          :slides-per-view="2"
+          :slides-per-group="2"
           :space-between="10"
           :looping="true"
           :breakpoints="breakpoints"
           :modules="modules"
           class="mySwiper"
         >
-          <swiper-slide>
+          <swiper-slide
+            v-for="(slide, key) in 12"
+            :key="key"
+            @click="handleClick"
+          >
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
-              alt=""
-            >
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
             >
           </swiper-slide>
@@ -107,8 +33,19 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const breakpoints = ref({
+  // when window width is >= 900px
+  465: {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 5,
+    centeredSlides: false,
+  },
+
   // when window width is >= 900px
   900: {
     slidesPerView: 4,
@@ -118,7 +55,7 @@ const breakpoints = ref({
   },
 
   // when window width is >= 1480px
-  1480: {
+  1280: {
     slidesPerView: 5,
     slidesPerGroup: 5,
     spaceBetween: 5,
@@ -126,7 +63,7 @@ const breakpoints = ref({
   },
 
   // when window width is >= 1800px
-  1800: {
+  1600: {
     slidesPerView: 6,
     slidesPerGroup: 6,
     spaceBetween: 5,
@@ -142,6 +79,10 @@ const breakpoints = ref({
 });
 
 const modules = ref([Navigation]);
+
+function handleClick() {
+  router.push(`detail/${1}`);
+}
 </script>
 
 <style lang="scss" scoped>
