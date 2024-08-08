@@ -3,17 +3,22 @@
     <header class="Header flex justify-between items-center">
       <div class="Header__left--side flex items-center">
         <router-link :to="'/'">
-          <p class="Header__logo q-ma-none q-mr-xl">Vueflix</p>
+          <p class="Header__logo q-ma-none q-mr-xl">
+            Vueflix
+          </p>
         </router-link>
 
         <nav class="Header__nav">
           <ul class="Header__nav--list flex q-pa-none">
             <li
-              v-for="(navItem, index) in navList"
+              v-for="(navItem, index) in navListFormated"
               :key="index"
-              class="Header__nav--item flex q-px-md"
+              :class="['Header__nav--item flex', { 'q-mr-md': index !== navList.length - 1 }]"
             >
-              <router-link class="Header__nav--link" :to="navItem.link">
+              <router-link
+                class="Header__nav--link"
+                :to="navItem.link"
+              >
                 {{ navItem.title }}
               </router-link>
             </li>
@@ -21,13 +26,16 @@
         </nav>
       </div>
 
-      <div class="Header__right--side flex q-px-xl q-pb-sm">
+      <div class="Header__right--side flex q-px-xl q-pb-sm mobile-hide ">
         <div class="Header__search q-px-md cursor-pointer">
           <span class="material-symbols-outlined"> search </span>
         </div>
 
         <div class="Header__profile q-pa-xs cursor-pointer">
-          <span class="material-symbols-outlined"> face </span>
+          <img
+            src="@/assets/images/avatar.jpg"
+            alt="avatar"
+          >
         </div>
       </div>
     </header>
@@ -35,7 +43,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, Ref } from 'vue';
+import { ref, Ref, onUnmounted, onMounted } from 'vue';
 
 import type { ListNav } from './HeaderComponent';
 
@@ -46,6 +54,27 @@ const navList: Ref<ListNav[]> = ref([
   { title: 'New & Popular', link: '/' },
   { title: 'My List', link: '/' },
 ]);
+
+const navListFormated: Ref<ListNav[]> = ref([])
+
+onMounted(() => {
+  onResize();
+  window.addEventListener('resize', onResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize);
+});
+
+function onResize() {
+  if(window.innerWidth <= 991) {
+    navListFormated.value = navList.value.slice(0, 2);
+    
+  } else {
+    navListFormated.value = navList.value;
+  }
+
+}
 </script>
 
 <style lang="scss" scoped>
@@ -82,8 +111,10 @@ const navList: Ref<ListNav[]> = ref([
   }
 
   &__profile {
-    background-color: $red-dark;
-    border-radius: 6px;
+    img {
+      max-width: 25px;
+      border-radius: 2px;
+    }
   }
 }
 </style>

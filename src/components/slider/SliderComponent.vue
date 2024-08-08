@@ -15,85 +15,85 @@
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            />
+            >
           </swiper-slide>
         </swiper>
       </div>
@@ -145,6 +145,7 @@ const modules = ref([Navigation]);
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_global.scss';
 .swiper-slide {
   text-align: center;
   display: flex;
@@ -152,10 +153,10 @@ const modules = ref([Navigation]);
   align-items: center;
   transition: all 300ms ease-in-out;
   border-radius: 5px;
-  min-height: 230px;
+  min-height: 240px;
 
   @media (max-width: 599px) {
-    min-height: 330px;
+    min-height: 350px;
   }
 
   img {
@@ -178,7 +179,7 @@ const modules = ref([Navigation]);
   }
 
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
     transition: all 300ms ease-in-out;
     transition-delay: 300ms;
     z-index: 1;

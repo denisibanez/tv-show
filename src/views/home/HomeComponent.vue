@@ -6,7 +6,14 @@
     }"
   >
     <div class="home__fade--top" />
+    
     <div class="home__wrapper">
+      <div class="row desktop-hide">
+        <div class="col">
+          <ButtonsBar />
+        </div>
+      </div>
+
       <div class="row mobile-hide">
         <div class="home__descriptionBanner col">
           <DescriptionBanner />
@@ -16,10 +23,12 @@
       <div class="home__swiper">
         <div class="row">
           <div class="col">
-            <p class="q-ma-none">Episodes</p>
+            <p class="q-ma-none">
+              Episodes
+            </p>
           </div>
         </div>
-        <SwiperComponent />
+        <SliderComponent />
       </div>
     </div>
 
@@ -28,8 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-import DescriptionBanner from '@/components/descriptionBanner/DescriptionBanner.vue';
-import SwiperComponent from '@/components/slider/SliderComponent.vue';
+import { ButtonsBar, DescriptionBanner, SliderComponent } from '@/components';
 //Methods
 </script>
 
@@ -54,7 +62,7 @@ import SwiperComponent from '@/components/slider/SliderComponent.vue';
     @media (max-width: 768px) {
       padding: 1rem;
       position: relative;
-      top: 15rem;
+      top: 10rem;
     }
   }
 
@@ -63,9 +71,15 @@ import SwiperComponent from '@/components/slider/SliderComponent.vue';
   }
 
   &__swiper {
+
     p {
       @include font-format($size: 1.3rem, $family: 'Netflix Sans Bold');
       top: 25px;
+
+      @media(max-width: 768px) {
+        top: 50px;
+        z-index: 1;
+      }
       position: relative;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
@@ -90,6 +104,17 @@ import SwiperComponent from '@/components/slider/SliderComponent.vue';
     }
     &--bottom {
       bottom: 0;
+      @media(max-width: 768px) {
+        height: 70%;
+        background-image: linear-gradient(
+          180deg,
+          transparent,
+          rgba(12, 12, 12, 0.7),
+          $color-background
+        );
+        z-index: 0;
+        bottom: 48px;
+      }
       background-image: linear-gradient(
         180deg,
         transparent,

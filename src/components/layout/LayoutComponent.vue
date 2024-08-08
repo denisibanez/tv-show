@@ -2,15 +2,21 @@
   <div class="layout__wrapper">
     <HeaderComponent />
     <router-view />
-    <div v-if="false" class="flex items-center justify-center full-page">
+    <div
+      v-if="false"
+      class="flex items-center justify-center full-page"
+    >
       <LoaderComponent />
+    </div>
+
+    <div class="mobileNav__wrapper desktop-hide">
+      <MobileNav />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import HeaderComponent from '@/components/header/HeaderComponent.vue';
-import LoaderComponent from '@/components/loader/LoaderComponent.vue';
+import { HeaderComponent, LoaderComponent, MobileNav } from '@/components';
 </script>
 
 <style lang="scss" scoped>
