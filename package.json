@@ -1,5 +1,5 @@
 {
-  "name": "tv-show",
+  "name": "vueflix",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,29 +10,45 @@
     "lint": "eslint src \"**/*.{ts,tsx,vue}\" --no-error-on-unmatched-pattern ",
     "lint:fix": "eslint src \"**/*.{ts,tsx,vue}\" --fix --no-error-on-unmatched-pattern ",
     "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss,vue}\" --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.8.0",
-    "eslint-plugin-jsdoc": "^50.0.0",
-    "globals": "^15.9.0",
+    "@storybook/manager-api": "^8.2.8",
+    "@storybook/theming": "^8.2.8",
+    "sass-embedded": "^1.77.8",
+    "swiper": "^11.1.9",
     "typescript-eslint": "^8.0.1",
     "vue": "^3.4.35",
     "vue-router": "4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.0.1",
-    "@typescript-eslint/parser": "^8.0.1",
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.8",
+    "@storybook/addon-interactions": "^8.2.8",
+    "@storybook/addon-links": "^8.2.8",
+    "@storybook/addon-onboarding": "^8.2.8",
+    "@storybook/blocks": "^8.2.8",
+    "@storybook/test": "^8.2.8",
+    "@storybook/vue3": "^8.2.8",
+    "@storybook/vue3-vite": "^8.2.8",
     "@vitejs/plugin-vue": "^5.1.2",
     "eslint": "^9.8.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-vue": "^9.27.0",
+    "husky": "^8.0.0",
     "prettier": "^3.3.3",
+    "storybook": "^8.2.8",
+    "storybook-vue3-router": "^5.0.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.0",
-    "vue-tsc": "^2.0.29",
-    "husky": "^8.0.0"
+    "vue-tsc": "^2.0.29"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
