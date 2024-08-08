@@ -3,7 +3,9 @@
     <header class="Header flex justify-between items-center">
       <div class="Header__left--side flex items-center">
         <router-link :to="'/'">
-          <p class="Header__logo q-ma-none q-mr-xl">Vueflix</p>
+          <p class="Header__logo q-ma-none q-mr-xl">
+            Vueflix
+          </p>
         </router-link>
 
         <nav class="Header__nav">
@@ -16,7 +18,10 @@
                 { 'q-mr-md': index !== navList.length - 1 },
               ]"
             >
-              <router-link class="Header__nav--link" :to="navItem.link">
+              <router-link
+                class="Header__nav--link"
+                :to="navItem.link"
+              >
                 {{ navItem.title }}
               </router-link>
             </li>
@@ -30,7 +35,10 @@
         </div>
 
         <div class="Header__profile q-pa-xs cursor-pointer">
-          <img src="@/assets/images/avatar.jpg" alt="avatar" />
+          <img
+            src="@/assets/images/avatar.jpg"
+            alt="avatar"
+          >
         </div>
       </div>
     </header>

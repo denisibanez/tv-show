@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@eslint/js": "^9.8.0",
-    "@typescript-eslint/parser": "^8.0.1",
     "sass-embedded": "^1.77.8",
     "swiper": "^11.1.9",
     "typescript-eslint": "^8.0.1",
