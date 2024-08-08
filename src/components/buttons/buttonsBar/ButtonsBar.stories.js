@@ -1,13 +1,10 @@
-
 import { ButtonsBar } from './index';
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'Components/Buttons/ButtonsBar',
   component: ButtonsBar,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
-  argTypes: {
-   
-  },
+  argTypes: {},
 };
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
