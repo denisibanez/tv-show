@@ -21,7 +21,6 @@
     "vue-router": "4"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.0.1",
     "@vitejs/plugin-vue": "^5.1.2",
     "eslint": "^9.8.0",
     "eslint-plugin-vue": "^9.27.0",
