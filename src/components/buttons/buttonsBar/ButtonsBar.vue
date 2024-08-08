@@ -16,13 +16,22 @@
     <div class="buttonsBar__actions">
       <div class="row">
         <div class="col-3">
-          <ButtonIcon label="My List" icon="add" />
+          <ButtonIcon
+            label="My List"
+            icon="add"
+          />
         </div>
         <div class="col-6">
-          <ButtonComponent label="Play" icon="play_arrow" />
+          <ButtonComponent
+            label="Play"
+            icon="play_arrow"
+          />
         </div>
         <div class="col-3">
-          <ButtonIcon label="Info" icon="info" />
+          <ButtonIcon
+            label="Info"
+            icon="info"
+          />
         </div>
       </div>
     </div>
@@ -30,12 +39,12 @@
 </template>
 
 <script lang="ts" setup>
+//COMPONENTS
 import { ButtonIcon, ButtonComponent } from '@/components';
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_global.scss';
-
 .buttonsBar {
   &__wrapper {
     z-index: 1;

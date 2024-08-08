@@ -27,14 +27,19 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// VUE
+import { ref } from 'vue';
+
+// COMPONENTS
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-import { ref } from 'vue';
+// ROUTER
 import { useRouter } from 'vue-router';
 
+// VARIABLES
 const router = useRouter();
 
 const breakpoints = ref({
@@ -80,6 +85,7 @@ const breakpoints = ref({
 
 const modules = ref([Navigation]);
 
+// METHODS
 function handleClick() {
   router.push(`detail/${1}`);
 }

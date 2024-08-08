@@ -10,6 +10,7 @@
 </template>
 
 <script lang="ts" setup>
+// TYPES
 import type { ButtonIcontProps } from './ButtonIcon.d';
 
 /* eslint-disable-next-line */

@@ -10,9 +10,10 @@
         ]"
         @click="handleClick(item)"
       >
-        <span v-if="item.notifications" class="badge"
-          ><span> {{ item.notifications }}</span></span
-        >
+        <span
+          v-if="item.notifications"
+          class="badge"
+        ><span> {{ item.notifications }}</span></span>
         <div class="icon">
           <span class="material-symbols-outlined buttonIcon__icon">
             {{ item.icon }}
@@ -30,10 +31,13 @@
 </template>
 
 <script lang="ts" setup>
+// VUE
 import { ref, Ref } from 'vue';
 
+// TYPES
 import type { MenuNavInterface } from './MobileNav.d';
 
+// VARIABLES
 const mobileNav: Ref<MenuNavInterface[]> = ref([
   { active: true, label: 'Home', notifications: 0, icon: 'house', link: '' },
   {
@@ -62,6 +66,7 @@ const mobileNav: Ref<MenuNavInterface[]> = ref([
 
 const emit = defineEmits(['update:handleClick']);
 
+// METHODS
 const handleClick = (item: MenuNavInterface) => {
   mobileNav.value.forEach((nav) => {
     if (item.label === nav.label) {

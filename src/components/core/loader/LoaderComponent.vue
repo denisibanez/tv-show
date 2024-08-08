@@ -3,6 +3,7 @@
 </template>
 
 <script lang="ts" setup>
+// TYPES
 import type { LoaderComponentProps } from './LoaderComponent.d';
 
 /* eslint-disable-next-line */

@@ -57,16 +57,20 @@
 </template>
 
 <script lang="ts" setup>
+// VUE
 import { Ref, ref } from 'vue';
 
+// COMPONENTS
 import { ButtonComponent } from '@/components';
 
+
+// TYPES
 import type { DescriptionBannerProps } from './DescriptionBanner.d';
 
 /* eslint-disable-next-line */
-const props = withDefaults(defineProps<DescriptionBannerProps>(), {
-});
+const props = withDefaults(defineProps<DescriptionBannerProps>(), {});
 
+// VARIABLES
 const loader: Ref<boolean> = ref(false);
 </script>
 

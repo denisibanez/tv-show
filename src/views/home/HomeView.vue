@@ -1,8 +1,6 @@
 <template>
   <BannerWrapper :background="background">
-    <template
-      #body
-    >
+    <template #body>
       <div class="home__wrapper">
         <div class="row desktop-hide">
           <div class="col">
@@ -32,17 +30,26 @@
 </template>
 
 <script lang="ts" setup>
+// VUE
 import { ref, Ref } from 'vue';
-import { ButtonsBar, DescriptionBanner, SliderComponent, BannerWrapper } from '@/components';
+// COMPONENTS
+import {
+  ButtonsBar,
+  DescriptionBanner,
+  SliderComponent,
+  BannerWrapper,
+} from '@/components';
 
-const background: Ref<string> = ref('https://wallpapers.com/images/featured/powerpuff-girls-plxo676xc77durlk.jpg');
+// VARIABLES
+const background: Ref<string> = ref(
+  'https://wallpapers.com/images/featured/powerpuff-girls-plxo676xc77durlk.jpg'
+);
 //Methods
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_global.scss';
 .home {
-
   &__swiper {
     p {
       @include font-format($size: 1.3rem, $family: 'Netflix Sans Bold');
@@ -57,5 +64,4 @@ const background: Ref<string> = ref('https://wallpapers.com/images/featured/powe
     }
   }
 }
-
 </style>

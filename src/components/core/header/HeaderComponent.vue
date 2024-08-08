@@ -46,10 +46,13 @@
 </template>
 
 <script lang="ts" setup>
+// VUE
 import { ref, Ref, onUnmounted, onMounted } from 'vue';
 
+// TYPES
 import type { ListNav } from './HeaderComponent';
 
+// VARIABLES
 const navList: Ref<ListNav[]> = ref([
   { title: 'Home', link: '/' },
   { title: 'TV Shows', link: '/' },
@@ -60,6 +63,7 @@ const navList: Ref<ListNav[]> = ref([
 
 const navListFormated: Ref<ListNav[]> = ref([]);
 
+// LIFE CYCLE
 onMounted(() => {
   onResize();
   window.addEventListener('resize', onResize);
@@ -69,6 +73,7 @@ onUnmounted(() => {
   window.removeEventListener('resize', onResize);
 });
 
+// METHODS
 function onResize() {
   if (window.innerWidth <= 991) {
     navListFormated.value = navList.value.slice(0, 2);
