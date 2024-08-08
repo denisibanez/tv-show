@@ -1,14 +1,9 @@
 <template>
   <div class="descriptionBanner__wrapper">
-    <p class="subtitle flex">
-      <span>DEV</span> Series
-    </p>
+    <p class="subtitle flex"><span>DEV</span> Series</p>
 
     <div class="descriptionBanner__brand">
-      <img
-        src="@/assets/images/powerpuffgirls_brand.svg"
-        alt="brand"
-      >
+      <img src="@/assets/images/powerpuffgirls_brand.svg" alt="brand" />
     </div>
 
     <div class="descriptionBanner__ranking flex items-center">
@@ -18,9 +13,7 @@
         </p>
       </div>
       <div class="text">
-        <p class="q-ma-none">
-          #1 in <span>Brazil</span> Today
-        </p>
+        <p class="q-ma-none">#1 in <span>Brazil</span> Today</p>
       </div>
     </div>
 
@@ -43,11 +36,7 @@
         @click.capture="loader = true"
       />
 
-      <ButtonComponent
-        label="More Info"
-        class="secondary"
-        icon="info"
-      />
+      <ButtonComponent label="More Info" class="secondary" icon="info" />
     </div>
   </div>
 </template>
@@ -55,7 +44,7 @@
 <script lang="ts" setup>
 import { Ref, ref } from 'vue';
 
-import {ButtonComponent} from '@/components';
+import { ButtonComponent } from '@/components';
 
 const loader: Ref<boolean> = ref(false);
 </script>

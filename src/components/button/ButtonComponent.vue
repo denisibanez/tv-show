@@ -1,19 +1,10 @@
 <template>
-  <button
-    :class="[buttonType]"
-    type="button"
-  >
-    <span
-      v-if="icon && !loader"
-      class="material-symbols-outlined q-mr-sm"
-    >
+  <button :class="[buttonType]" type="button">
+    <span v-if="icon && !loader" class="material-symbols-outlined q-mr-sm">
       {{ icon }}
     </span>
     <span v-if="label && !loader">{{ label }}</span>
-    <LoaderComponent
-      v-if="loader"
-      size="small"
-    />
+    <LoaderComponent v-if="loader" size="small" />
   </button>
 </template>
 
@@ -45,28 +36,27 @@ button {
   @include font-format(
     $size: 1rem,
     $family: 'Netflix Sans bold',
-    $line-height: 0.8rem,
+    $line-height: 0.8rem
   );
 
   span {
     font-weight: 800;
   }
 
-
   &.primary {
     background: $color-text;
     color: $color-background;
   }
   &.primary:hover {
-    background: #BFBFBF;
+    background: #bfbfbf;
   }
 
   &.secondary {
-    background: #4D4D4D;
+    background: #4d4d4d;
     color: $color-text;
   }
   &.secondary:hover {
-    background: #2C2C2C;
+    background: #2c2c2c;
     color: $color-text;
   }
 }

@@ -16,9 +16,7 @@
       <div class="home__swiper">
         <div class="row">
           <div class="col">
-            <p class="q-ma-none">
-              Episodes
-            </p>
+            <p class="q-ma-none">Episodes</p>
           </div>
         </div>
         <SwiperComponent />

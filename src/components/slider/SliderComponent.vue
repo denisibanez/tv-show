@@ -15,85 +15,85 @@
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
           <swiper-slide>
             <img
               src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg"
               alt=""
-            >
+            />
           </swiper-slide>
         </swiper>
       </div>
@@ -153,39 +153,39 @@ const modules = ref([Navigation]);
   transition: all 300ms ease-in-out;
   border-radius: 5px;
   min-height: 230px;
-  
-  @media(max-width: 599px) {
+
+  @media (max-width: 599px) {
     min-height: 330px;
   }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      max-height: 160px;
-      object-fit: cover;
-      border-radius: 5px;
-      max-width: 18rem;
-      cursor: grab;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+    max-width: 18rem;
+    cursor: grab;
 
-      &:active {
-        cursor: grabbing;
-      }
-
-      @media(max-width: 599px) {
-        min-height: 230px;
-      }
+    &:active {
+      cursor: grabbing;
     }
 
-    &:hover {
-      transform: scale(1.5);
-      transition: all 300ms ease-in-out;
-      transition-delay: 300ms;
-      z-index: 1;
+    @media (max-width: 599px) {
+      min-height: 230px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 300ms ease-in-out;
+    transition-delay: 300ms;
+    z-index: 1;
 
     img {
       transition-delay: 300ms;
-      box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
     }
   }
 }

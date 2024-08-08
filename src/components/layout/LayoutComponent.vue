@@ -2,10 +2,7 @@
   <div class="layout__wrapper">
     <HeaderComponent />
     <router-view />
-    <div
-      v-if="false"
-      class="flex items-center justify-center full-page"
-    >
+    <div v-if="false" class="flex items-center justify-center full-page">
       <LoaderComponent />
     </div>
   </div>

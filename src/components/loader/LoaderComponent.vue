@@ -6,8 +6,7 @@
 import type { LoaderComponentProps } from './LoaderComponent.d';
 
 /* eslint-disable-next-line */
-const props = withDefaults(defineProps<LoaderComponentProps>(), {
-});
+const props = withDefaults(defineProps<LoaderComponentProps>(), {});
 </script>
 
 <style lang="scss" scoped>
@@ -27,7 +26,7 @@ const props = withDefaults(defineProps<LoaderComponentProps>(), {
     height: 24px;
     border-width: 3px;
 
-    &:after{
+    &:after {
       width: 24px;
       height: 24px;
       border-width: 3px;

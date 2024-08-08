@@ -3,9 +3,7 @@
     <header class="Header flex justify-between items-center">
       <div class="Header__left--side flex items-center">
         <router-link :to="'/'">
-          <p class="Header__logo q-ma-none q-mr-xl">
-            Devflix
-          </p>
+          <p class="Header__logo q-ma-none q-mr-xl">Vueflix</p>
         </router-link>
 
         <nav class="Header__nav">
@@ -15,10 +13,7 @@
               :key="index"
               class="Header__nav--item flex q-px-md"
             >
-              <router-link
-                class="Header__nav--link"
-                :to="navItem.link"
-              >
+              <router-link class="Header__nav--link" :to="navItem.link">
                 {{ navItem.title }}
               </router-link>
             </li>
