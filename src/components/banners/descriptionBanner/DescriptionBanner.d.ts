@@ -1,5 +1,5 @@
 export interface DescriptionBannerProps {
   isDetail?: boolean;
-  description: string;
-  avarage: number;
+  description: string | undefined;
+  avarage: number | null | undefined;
 }

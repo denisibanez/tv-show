@@ -52,8 +52,8 @@ import {
 import type {
   DataShowInterfaceResponse,
   ShowInterfaceResponse,
-} from '@/types/show.types';
-import type { DataEpisodesInterfaceResponse } from '@/types/episodes.types';
+} from '@/models/Show.d';
+import type { DataEpisodesInterfaceResponse, EpisodesInterfaceResponse } from '@/models/Episodes.d';
 import type { ShowObjectInterface } from './HomeView.d';
 
 // SERVICE
@@ -65,6 +65,7 @@ import mountUrl from '@/utils/mountParams.utils';
 // STORE
 import { storeToRefs } from 'pinia';
 import { useLoadingStore } from '@/stores/loading/loading.store';
+import { EpisodeByNumberInterface } from '@/models/Episode';
 
 // VARIABLES
 const { LOADING_STATE } = storeToRefs(useLoadingStore(pinia));
@@ -78,7 +79,7 @@ const showObject: Ref<ShowObjectInterface> = ref({
   avarage: 0,
 });
 
-const episodes: Ref<ShowInterfaceResponse[]> = ref([]);
+const episodes: Ref<EpisodesInterfaceResponse[]> = ref([]);
 
 // LIFECYCLE
 onMounted(() => {
@@ -107,7 +108,7 @@ async function getShowData() {
   );
 }
 
-async function getEpisodesList(id: string) {
+async function getEpisodesList(id: number) {
   const urlParams = {
     path: `/shows/${id}/episodes`,
   };
