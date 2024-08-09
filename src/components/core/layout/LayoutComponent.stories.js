@@ -1,16 +1,13 @@
-
 import { LayoutComponent } from './index';
 /* import storybook-vue3-router */
-import { vueRouter } from 'storybook-vue3-router'
+import { vueRouter } from 'storybook-vue3-router';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'Components/Core/LayoutComponent',
   component: LayoutComponent,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
-  argTypes: {
-   
-  },
+  argTypes: {},
 };
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
@@ -27,12 +24,10 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Primary.args = {
-
-};
+Primary.args = {};
 
 /* adding storybook-vue3-router decorator */
 Primary.decorators = [
   /* this is the basic setup with no params passed to the decorator */
-  vueRouter()
-]
+  vueRouter(),
+];
