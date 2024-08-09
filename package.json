@@ -18,10 +18,13 @@
     "@eslint/js": "^9.8.0",
     "@storybook/manager-api": "^8.2.8",
     "@storybook/theming": "^8.2.8",
+    "axios": "^1.7.3",
+    "pinia": "^2.2.1",
     "sass-embedded": "^1.77.8",
     "swiper": "^11.1.9",
     "typescript-eslint": "^8.0.1",
     "vue": "^3.4.35",
+    "vue-axios": "^3.5.2",
     "vue-router": "4"
   },
   "devDependencies": {

@@ -12,14 +12,20 @@
           class="mySwiper"
         >
           <swiper-slide
-            v-for="(slide, key) in 12"
+            v-for="(episode, key) in episodes"
             :key="key"
-            @click="handleClick"
+            @click="handleClick(episode)"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/7/78/Powerpuff_Girls_Movie_poster.jpg"
+              :src="episode?.image ? episode.image.original : 'https://m.media-amazon.com/images/M/MV5BZjI4NjdjM2QtMGUzNy00YmY2LWFhZDUtMWRmMWUxZWJmZDFlXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg'"
               alt=""
             >
+
+            <div class="slider__epName q-px-md q-py-sm q-ma-sm mobile-hide">
+              <p class="q-ma-none text-left">
+                {{ episode.name }}
+              </p>  
+            </div>
           </swiper-slide>
         </swiper>
       </div>
@@ -39,6 +45,14 @@ import 'swiper/css';
 // ROUTER
 import { useRouter } from 'vue-router';
 
+// TYPES
+import type { SliderComponentProps } from './SliderComponent.d';
+import type { EpisodesInterfaceResponse } from '@/models/Episodes';
+
+/* eslint-disable-next-line */
+const props = withDefaults(defineProps<SliderComponentProps>(), {
+});
+
 // VARIABLES
 const router = useRouter();
 
@@ -52,7 +66,7 @@ const breakpoints = ref({
   },
 
   // when window width is >= 900px
-  900: {
+  1024: {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 5,
@@ -86,13 +100,38 @@ const breakpoints = ref({
 const modules = ref([Navigation]);
 
 // METHODS
-function handleClick() {
-  router.push(`detail/${1}`);
+function handleClick(episode: EpisodesInterfaceResponse) {
+  const {
+    id,
+    season,
+    number,
+  } = episode;
+  router.push(`detail/${id.toString()}/${season.toString()}/${number.toString()}`);
 }
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_global.scss';
+
+.slider {
+  &__epName {
+    position: absolute;
+    background-color: $red-dark;
+    bottom:40px;
+
+    p {
+      text-overflow: ellipsis;
+      max-width: 180px;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @include font-format(
+        $size: 1rem,
+        $family: 'Netflix Sans Regular',
+      );
+    }
+  }
+}
 .swiper-slide {
   text-align: center;
   display: flex;

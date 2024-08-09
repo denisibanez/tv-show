@@ -16,7 +16,7 @@ const router = createRouter({
         },
 
         {
-          path: 'detail/:id',
+          path: 'detail/:id/:season/:number',
           component: () => import('@/views/detail/DetailView.vue'),
           meta: { requiresAuth: true },
         },

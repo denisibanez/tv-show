@@ -3,7 +3,7 @@
     <HeaderComponent />
     <router-view />
     <div
-      v-if="false"
+      v-if="LOADING_STATE"
       class="flex items-center justify-center full-page"
     >
       <LoaderComponent />
@@ -16,8 +16,16 @@
 </template>
 
 <script lang="ts" setup>
+import pinia from '@/main';
 // COMPONENTS
 import { HeaderComponent, LoaderComponent, MobileNav } from '@/components';
+
+// STORE
+import { storeToRefs } from 'pinia';
+import { useLoadingStore } from '@/stores/loading/loading.store';
+
+// VARIABLES
+const { LOADING_STATE } = storeToRefs(useLoadingStore(pinia));
 </script>
 
 <style lang="scss" scoped>
