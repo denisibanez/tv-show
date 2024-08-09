@@ -37,4 +37,5 @@ Technical Evolutions Backlog
 # Links 
 
 For access host in vercel, you need to login in vercel and add the project to your account.
+https://tv-show-cmdo0kpxe-denisibanezs-projects.vercel.app/[https://tv-show-cmdo0kpxe-denisibanezs-projects.vercel.app/]
 
