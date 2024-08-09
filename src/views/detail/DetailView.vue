@@ -1,9 +1,12 @@
 <template>
-  <BannerWrapper :background="background" :is-detail="true">
+  <BannerWrapper
+    :background="background"
+    :is-detail="true"
+  >
     <template #body>
       <div class="detailView">
         <div class="row justify-center">
-          <div class="col detailView__title text-center q-pa-md">
+          <div class="col detailView__title text-center q-pa-md mobile-hide">
             <p class="q-ma-none">
               {{ episode?.name }}
             </p>
