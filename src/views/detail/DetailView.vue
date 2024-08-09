@@ -1,8 +1,5 @@
 <template>
-  <BannerWrapper
-    :background="background"
-    :is-detail="true"
-  >
+  <BannerWrapper :background="background" :is-detail="true">
     <template #body>
       <div class="detailView">
         <div class="row justify-center">
