@@ -53,7 +53,10 @@ import type {
   DataShowInterfaceResponse,
   ShowInterfaceResponse,
 } from '@/models/Show.d';
-import type { DataEpisodesInterfaceResponse, EpisodesInterfaceResponse } from '@/models/Episodes.d';
+import type {
+  DataEpisodesInterfaceResponse,
+  EpisodesInterfaceResponse,
+} from '@/models/Episodes.d';
 import type { ShowObjectInterface } from './HomeView.d';
 
 // SERVICE

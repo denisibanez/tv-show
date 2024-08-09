@@ -27,3 +27,14 @@ The app use:
 * "npm run format" to format code
 
 # OBSERVATIONS
+Technical Evolutions Backlog
+- Implement features that were not created, only mocked, such as menus, profile, search and some layout button actions.
+- Finish configuring storybook and documenting (missing mockar spys and lib, among other adjustments)
+- Implementation of interceptor functions (such as auth token, access denied or expired, error toast or success in requests), guards, login
+- Install and configure i18n for internationalization
+- Evolve tests
+
+# Links 
+
+For access host in vercel, you need to login in vercel and add the project to your account.
+
