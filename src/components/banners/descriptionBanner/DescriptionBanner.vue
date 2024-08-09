@@ -19,19 +19,17 @@
       </div>
       <div class="text">
         <p class="q-ma-none">
-          #1 in <span>Brazil</span> Today
+          <span v-if="avarage">#{{ returnAvarage(avarage) }}</span> in
+          <span>Brazil</span> Today
         </p>
       </div>
     </div>
 
     <div class="descriptionBanner__content">
-      <h1 class="descriptionBanner__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in erat
-        tempus, ultricies augue quis, condimentum eros. Vivamus eu aliquet nibh.
-        Nunc nec lorem vel urna consequat commodo. Pellentesque aliquam lorem
-        posuere massa vulputate hendrerit. Nullam nec nunc nec nunc, lorem
-        posuere massa vulputate hendrerit.
-      </h1>
+      <h1
+        class="descriptionBanner__text"
+        v-html="description"
+      />
     </div>
 
     <div class="descriptionBanner__actions">
@@ -71,6 +69,14 @@ const props = withDefaults(defineProps<DescriptionBannerProps>(), {});
 
 // VARIABLES
 const loader: Ref<boolean> = ref(false);
+
+//METHODS
+function returnAvarage(avarageNumber: number) {
+  if (avarageNumber) {
+    const array = JSON.stringify(avarageNumber).split('.');
+    return array[0];
+  }
+}
 </script>
 
 <style lang="scss" scoped>
