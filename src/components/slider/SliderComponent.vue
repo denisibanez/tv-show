@@ -17,14 +17,18 @@
             @click="handleClick(episode)"
           >
             <img
-              :src="episode?.image ? episode.image.original : 'https://m.media-amazon.com/images/M/MV5BZjI4NjdjM2QtMGUzNy00YmY2LWFhZDUtMWRmMWUxZWJmZDFlXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg'"
+              :src="
+                episode?.image
+                  ? episode.image.original
+                  : 'https://m.media-amazon.com/images/M/MV5BZjI4NjdjM2QtMGUzNy00YmY2LWFhZDUtMWRmMWUxZWJmZDFlXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg'
+              "
               alt=""
             >
 
             <div class="slider__epName q-px-md q-py-sm q-ma-sm mobile-hide">
               <p class="q-ma-none text-left">
                 {{ episode.name }}
-              </p>  
+              </p>
             </div>
           </swiper-slide>
         </swiper>
@@ -50,8 +54,7 @@ import type { SliderComponentProps } from './SliderComponent.d';
 import type { EpisodesInterfaceResponse } from '@/models/Episodes';
 
 /* eslint-disable-next-line */
-const props = withDefaults(defineProps<SliderComponentProps>(), {
-});
+const props = withDefaults(defineProps<SliderComponentProps>(), {});
 
 // VARIABLES
 const router = useRouter();
@@ -101,12 +104,10 @@ const modules = ref([Navigation]);
 
 // METHODS
 function handleClick(episode: EpisodesInterfaceResponse) {
-  const {
-    id,
-    season,
-    number,
-  } = episode;
-  router.push(`detail/${id.toString()}/${season.toString()}/${number.toString()}`);
+  const { id, season, number } = episode;
+  router.push(
+    `detail/${id.toString()}/${season.toString()}/${number.toString()}`
+  );
 }
 </script>
 
@@ -117,7 +118,7 @@ function handleClick(episode: EpisodesInterfaceResponse) {
   &__epName {
     position: absolute;
     background-color: $red-dark;
-    bottom:40px;
+    bottom: 40px;
 
     p {
       text-overflow: ellipsis;
@@ -125,10 +126,7 @@ function handleClick(episode: EpisodesInterfaceResponse) {
       overflow: hidden;
       white-space: nowrap;
 
-      @include font-format(
-        $size: 1rem,
-        $family: 'Netflix Sans Regular',
-      );
+      @include font-format($size: 1rem, $family: 'Netflix Sans Regular');
     }
   }
 }

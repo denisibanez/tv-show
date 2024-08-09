@@ -19,7 +19,8 @@
       </div>
       <div class="text">
         <p class="q-ma-none">
-          <span v-if="avarage">#{{ returnAvarage(avarage) }}</span> in <span>Brazil</span> Today
+          <span v-if="avarage">#{{ returnAvarage(avarage) }}</span> in
+          <span>Brazil</span> Today
         </p>
       </div>
     </div>
@@ -71,7 +72,7 @@ const loader: Ref<boolean> = ref(false);
 
 //METHODS
 function returnAvarage(avarageNumber: number) {
-  if(avarageNumber) {
+  if (avarageNumber) {
     const array = JSON.stringify(avarageNumber).split('.');
     return array[0];
   }

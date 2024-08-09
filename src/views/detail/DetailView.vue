@@ -40,7 +40,10 @@ import mountUrl from '@/utils/mountParams.utils';
 import { BannerWrapper, DescriptionBanner } from '@/components';
 
 // TYPES
-import type { EpisodeByNumberInterface, DataEpisodeInterface } from '@/models/Episode.d';
+import type {
+  EpisodeByNumberInterface,
+  DataEpisodeInterface,
+} from '@/models/Episode.d';
 
 // ROUTER
 import { useRoute } from 'vue-router';
@@ -55,14 +58,11 @@ const episode: Ref<EpisodeByNumberInterface | null> = ref(null);
 
 //LIFECYCLE
 onMounted(() => {
-  getEpisiodeByNumber();  
+  getEpisiodeByNumber();
 });
 
 async function getEpisiodeByNumber() {
-  const {
-    season,
-    number,
-  } = route.params;
+  const { season, number } = route.params;
   const urlParams = {
     path: `/shows/1955/episodebynumber?`,
     params: {
@@ -78,9 +78,9 @@ async function getEpisiodeByNumber() {
 
   await dynamicService(requestParams).then((response: DataEpisodeInterface) => {
     const data = response?.data;
-    if(data) {
-     episode.value = data;
-     background.value = data.image?.original || background.value;
+    if (data) {
+      episode.value = data;
+      background.value = data.image?.original || background.value;
     }
   });
 }
