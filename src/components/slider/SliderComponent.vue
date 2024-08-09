@@ -23,7 +23,7 @@
                   : 'https://m.media-amazon.com/images/M/MV5BZjI4NjdjM2QtMGUzNy00YmY2LWFhZDUtMWRmMWUxZWJmZDFlXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg'
               "
               alt=""
-            >
+            />
 
             <div class="slider__epName q-px-md q-py-sm q-ma-sm mobile-hide">
               <p class="q-ma-none text-left">

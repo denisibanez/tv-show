@@ -103,6 +103,7 @@ async function getEpisiodeByNumber() {
 
     @media (max-width: 768px) {
       background-color: transparent;
+      top: 6rem;
     }
   }
   &__descriptionBanner {
