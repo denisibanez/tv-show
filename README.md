@@ -35,7 +35,5 @@ Technical Evolutions Backlog
 - Evolve tests
 
 # Links 
-
-For access host in vercel, you need to login in vercel and add the project to your account.
 site: [https://tv-show-cmdo0kpxe-denisibanezs-projects.vercel.app/]
 
