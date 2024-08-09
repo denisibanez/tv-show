@@ -61,7 +61,6 @@ const props = withDefaults(defineProps<BannerWrapperProps>(), {
             rgba(37, 37, 37, 1),
             $color-background
           );
-
         }
       }
     }

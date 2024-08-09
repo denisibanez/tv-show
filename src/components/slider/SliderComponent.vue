@@ -163,7 +163,8 @@ function handleClick(episode: EpisodesInterfaceResponse) {
   }
 
   &:hover {
-    transform: scale(1.3);
+    @media(min-width: 768px) {
+      transform: scale(1.3);
     transition: all 300ms ease-in-out;
     transition-delay: 300ms;
     z-index: 1;
@@ -171,6 +172,7 @@ function handleClick(episode: EpisodesInterfaceResponse) {
     img {
       transition-delay: 300ms;
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+    }
     }
   }
 }
