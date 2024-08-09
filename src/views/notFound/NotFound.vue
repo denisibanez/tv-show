@@ -1,7 +1,5 @@
 <template>
-  <div class="notFound__wrapper">
-    Not Found
-  </div>
+  <div class="notFound__wrapper">Not Found</div>
 </template>
 
 <script lang="ts" setup></script>

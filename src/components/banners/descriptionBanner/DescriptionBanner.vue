@@ -110,6 +110,10 @@ function returnAvarage(avarageNumber: number) {
     img {
       width: 100%;
       max-width: 400px;
+
+      @media(max-width: 768px) {
+        max-width: 250px;
+      }
     }
   }
 

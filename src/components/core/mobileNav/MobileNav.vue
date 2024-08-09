@@ -10,10 +10,9 @@
         ]"
         @click="handleClick(item)"
       >
-        <span
-          v-if="item.notifications"
-          class="badge"
-        ><span> {{ item.notifications }}</span></span>
+        <span v-if="item.notifications" class="badge"
+          ><span> {{ item.notifications }}</span></span
+        >
         <div class="icon">
           <span class="material-symbols-outlined buttonIcon__icon">
             {{ item.icon }}
