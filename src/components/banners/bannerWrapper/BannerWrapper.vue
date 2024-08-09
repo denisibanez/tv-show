@@ -51,6 +51,18 @@ const props = withDefaults(defineProps<BannerWrapperProps>(), {
           rgba(37, 37, 37, 0.3),
           $color-background
         );
+
+        @media (max-width: 768px) {
+          bottom: 20vh;
+          height: 85%;
+          background-image: linear-gradient(
+            180deg,
+            transparent,
+            rgba(37, 37, 37, 1),
+            $color-background
+          );
+
+        }
       }
     }
   }
