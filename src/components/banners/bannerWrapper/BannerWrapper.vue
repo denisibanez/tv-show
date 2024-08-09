@@ -76,8 +76,7 @@ const props = withDefaults(defineProps<BannerWrapperProps>(), {
 
     @media (max-width: 768px) {
       padding: 1rem;
-      position: relative;
-      top: 10rem;
+      bottom: 35px;
     }
   }
 }
