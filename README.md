@@ -35,5 +35,5 @@ Technical Evolutions Backlog
 - Evolve tests
 
 # Links 
-site: [[https://tv-show-cmdo0kpxe-denisibanezs-projects.vercel.app/](https://tv-show-puce.vercel.app/)]
+site: [[Site](https://tv-show-puce.vercel.app/)]
 
