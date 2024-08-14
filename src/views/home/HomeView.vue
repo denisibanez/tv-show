@@ -1,8 +1,5 @@
 <template>
-  <BannerWrapper
-    v-show="!LOADING_STATE"
-    :background="showObject?.background"
-  >
+  <BannerWrapper v-show="!LOADING_STATE" :background="showObject?.background">
     <template #body>
       <div class="home__wrapper">
         <div class="row desktop-hide">
@@ -23,9 +20,7 @@
         <div class="home__swiper">
           <div class="row">
             <div class="col">
-              <p class="q-ma-none">
-                Episodes
-              </p>
+              <p class="q-ma-none">Episodes</p>
             </div>
           </div>
           <SliderComponent :episodes="episodes" />

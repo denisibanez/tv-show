@@ -117,7 +117,6 @@ function handleClick(episode: EpisodesInterfaceResponse) {
 .slider {
   &__epName {
     position: absolute;
-    background-color: $red-dark;
     bottom: 40px;
 
     p {
