@@ -163,16 +163,16 @@ function handleClick(episode: EpisodesInterfaceResponse) {
   }
 
   &:hover {
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
       transform: scale(1.3);
-    transition: all 300ms ease-in-out;
-    transition-delay: 300ms;
-    z-index: 1;
-
-    img {
+      transition: all 300ms ease-in-out;
       transition-delay: 300ms;
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
-    }
+      z-index: 1;
+
+      img {
+        transition-delay: 300ms;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+      }
     }
   }
 }

@@ -1,5 +1,8 @@
 <template>
-  <BannerWrapper v-show="!LOADING_STATE" :background="showObject?.background">
+  <BannerWrapper
+    v-show="!LOADING_STATE"
+    :background="showObject?.background"
+  >
     <template #body>
       <div class="home__wrapper">
         <div class="row desktop-hide">
@@ -20,7 +23,9 @@
         <div class="home__swiper">
           <div class="row">
             <div class="col">
-              <p class="q-ma-none">Episodes</p>
+              <p class="q-ma-none">
+                Episodes
+              </p>
             </div>
           </div>
           <SliderComponent :episodes="episodes" />
@@ -63,14 +68,12 @@ import mountUrl from '@/utils/mountParams.utils';
 // STORE
 import { storeToRefs } from 'pinia';
 import { useLoadingStore } from '@/stores/loading/loading.store';
-import { EpisodeByNumberInterface } from '@/models/Episode';
-
+import image from '../../assets/images/dark-season-3-netflix-series-lisa-vicari-louis-hofmann-2732x2732-1769.jpg';
 // VARIABLES
 const { LOADING_STATE } = storeToRefs(useLoadingStore(pinia));
 
 const showObject: Ref<ShowObjectInterface> = ref({
-  background:
-    'https://wallpapers.com/images/featured/powerpuff-girls-plxo676xc77durlk.jpg',
+  background: image,
   id: null,
   description: '',
   name: '',
@@ -87,7 +90,7 @@ onMounted(() => {
 //Methods
 async function getShowData() {
   const urlParams = {
-    path: `/shows/1955`,
+    path: `/shows/17861`,
   };
   const requestParams = {
     type: 'get',
@@ -128,9 +131,9 @@ async function getEpisodesList(id: number) {
 
 function mountEpisodes(show: ShowInterfaceResponse) {
   const { name, image, summary, id, rating } = show;
-
+  const windowSize = window.innerWidth >= 991;
   showObject.value = {
-    background: image?.original,
+    background: windowSize ? showObject.value.background : image?.original,
     id,
     description: summary,
     name,

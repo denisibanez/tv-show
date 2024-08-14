@@ -1,9 +1,12 @@
 <template>
-  <BannerWrapper :background="background" :is-detail="true">
+  <BannerWrapper
+    :background="background"
+    :is-detail="true"
+  >
     <template #body>
       <div class="detailView">
         <div class="row justify-center">
-          <div class="col detailView__title text-center q-pa-md mobile-hide">
+          <div class="col detailView__title text-center q-pa-md">
             <p class="q-ma-none">
               {{ episode?.name }}
             </p>
@@ -44,12 +47,11 @@ import type {
 
 // ROUTER
 import { useRoute } from 'vue-router';
+import image from '../../assets/images/dark-season-3-netflix-series-lisa-vicari-louis-hofmann-2732x2732-1769.jpg';
 
 // VARIABLES
 const route = useRoute();
-const background: Ref<string> = ref(
-  'https://wallpapers.com/images/featured/powerpuff-girls-plxo676xc77durlk.jpg'
-);
+const background: Ref<string> = ref(image);
 
 const episode: Ref<EpisodeByNumberInterface | null> = ref(null);
 
@@ -61,7 +63,7 @@ onMounted(() => {
 async function getEpisiodeByNumber() {
   const { season, number } = route.params;
   const urlParams = {
-    path: `/shows/1955/episodebynumber?`,
+    path: `/shows/17861/episodebynumber?`,
     params: {
       season,
       number,
@@ -90,7 +92,7 @@ async function getEpisiodeByNumber() {
     position: fixed;
     top: 10rem;
     max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.5);
+
     @include font-format(
       $size: 2.5rem,
       $family: 'Netflix Sans bold',
@@ -100,6 +102,10 @@ async function getEpisiodeByNumber() {
 
     @media (max-width: 768px) {
       background-color: transparent;
+      top: 12rem;
+    }
+
+    @media (max-width: 375px) {
       top: 6rem;
     }
   }

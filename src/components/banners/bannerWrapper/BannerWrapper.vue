@@ -40,11 +40,11 @@ const props = withDefaults(defineProps<BannerWrapperProps>(), {
 
   &.isDetail {
     background-position: center center;
-    min-height: 40vh;
+    min-height: 50vh;
 
     .fade {
       &--bottom {
-        bottom: 60vh;
+        bottom: 50vh;
         background-image: linear-gradient(
           180deg,
           transparent,
@@ -53,7 +53,7 @@ const props = withDefaults(defineProps<BannerWrapperProps>(), {
         );
 
         @media (max-width: 768px) {
-          bottom: 20vh;
+          bottom: 12vh;
           height: 85%;
           background-image: linear-gradient(
             180deg,

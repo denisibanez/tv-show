@@ -10,9 +10,10 @@
         ]"
         @click="handleClick(item)"
       >
-        <span v-if="item.notifications" class="badge"
-          ><span> {{ item.notifications }}</span></span
-        >
+        <span
+          v-if="item.notifications"
+          class="badge"
+        ><span> {{ item.notifications }}</span></span>
         <div class="icon">
           <span class="material-symbols-outlined buttonIcon__icon">
             {{ item.icon }}
@@ -35,35 +36,34 @@ import { ref, Ref } from 'vue';
 
 // TYPES
 import type { MenuNavInterface } from './MobileNav.d';
+import router from '@/router/routes';
 
 // VARIABLES
 const mobileNav: Ref<MenuNavInterface[]> = ref([
-  { active: true, label: 'Home', notifications: 0, icon: 'house', link: '' },
+  { active: true, label: 'Home', notifications: 0, icon: 'house', link: '/' },
   {
     active: false,
     label: 'Search',
     notifications: 0,
     icon: 'search',
-    link: '',
+    link: '/',
   },
   {
     active: false,
     label: 'Coming Soon',
     notifications: 7,
     icon: 'video_library',
-    link: '',
+    link: '/',
   },
   {
     active: false,
     label: 'Downloads',
     notifications: 0,
     icon: 'download',
-    link: '',
+    link: '/',
   },
   { active: false, label: 'More', notifications: 0, icon: 'menu', link: '' },
 ]);
-
-const emit = defineEmits(['update:handleClick']);
 
 // METHODS
 const handleClick = (item: MenuNavInterface) => {
@@ -74,7 +74,7 @@ const handleClick = (item: MenuNavInterface) => {
       nav.active = false;
     }
   });
-  emit('update:handleClick', item);
+  router.push(item.link);
 };
 </script>
 
